@@ -1,0 +1,33 @@
+{
+  "name": "next-backend",
+  "version": "1.0.0",
+  "description": "Your Time Scheduling App Backend",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Thebluedragon7/next-backend.git"
+  },
+  "keywords": [
+    "next"
+  ],
+  "author": "TheBlueDragon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thebluedragon7/next-backend/issues"
+  },
+  "homepage": "https://github.com/Thebluedragon7/next-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.16"
+  }
+}
