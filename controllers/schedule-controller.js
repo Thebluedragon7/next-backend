@@ -72,7 +72,24 @@ const updateScheduleById = async (req, res, next) => {
   res.status(200).json({ schedule });
 };
 
+const deleteScheduleById = async (req, res, next) => {
+  const scheduleID = req.params.id;
+
+  let schedule = await Schedule.findByIdAndRemove(scheduleID);
+
+  if (!schedule) {
+    res.status(404).json({
+      message: "Cannot delet the Schedule!",
+    });
+  }
+
+  res.status(200).json({
+    message: "Schedule Deleted Successfully!",
+  });
+};
+
 exports.getSchedules = getSchedules;
 exports.addSchedules = addSchedules;
 exports.getSchedulesById = getScheduleById;
 exports.updateScheduleById = updateScheduleById;
+exports.deleteScheduleById = deleteScheduleById;
